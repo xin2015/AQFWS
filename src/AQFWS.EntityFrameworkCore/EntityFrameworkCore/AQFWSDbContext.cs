@@ -5,6 +5,9 @@ using Volo.Abp.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore.Modeling;
 using Volo.Abp.Identity;
 using Volo.Abp.Users.EntityFrameworkCore;
+using AQFWS.Areas;
+using AQFWS.Stations;
+using AQFWS.AirQualityRecords;
 
 namespace AQFWS.EntityFrameworkCore
 {
@@ -26,6 +29,71 @@ namespace AQFWS.EntityFrameworkCore
          * Also map them inside AQFWSDbContextModelCreatingExtensions.ConfigureAQFWS
          */
 
+        public DbSet<Area> Areas { get; set; }
+
+        public DbSet<Station> Stations { get; set; }
+
+        public DbSet<AirQualityIndexHourlySrcLiveRecord> AirQualityIndexHourlySrcLiveRecords { get; set; }
+
+        public DbSet<AirQualityIndexHourlySrcStdRecord> AirQualityIndexHourlySrcStdRecords { get; set; }
+
+        public DbSet<AirQualityIndexHourlyPubLiveRecord> AirQualityIndexHourlyPubLiveRecords { get; set; }
+
+        public DbSet<AirQualityIndexHourlyPubStdRecord> AirQualityIndexHourlyPubStdRecords { get; set; }
+
+        public DbSet<AirQualityIndexHourlyAppLiveRecord> AirQualityIndexHourlyAppLiveRecords { get; set; }
+
+        public DbSet<AirQualityIndexHourlyAppStdRecord> AirQualityIndexHourlyAppStdRecords { get; set; }
+
+        public DbSet<AirQualityIndexDailySrcLiveRecord> AirQualityIndexDailySrcLiveRecords { get; set; }
+
+        public DbSet<AirQualityIndexDailySrcStdRecord> AirQualityIndexDailySrcStdRecords { get; set; }
+
+        public DbSet<AirQualityIndexDailyPubLiveRecord> AirQualityIndexDailyPubLiveRecords { get; set; }
+
+        public DbSet<AirQualityIndexDailyPubStdRecord> AirQualityIndexDailyPubStdRecords { get; set; }
+
+        public DbSet<AirQualityIndexDailyAppLiveRecord> AirQualityIndexDailyAppLiveRecords { get; set; }
+
+        public DbSet<AirQualityIndexDailyAppStdRecord> AirQualityIndexDailyAppStdRecords { get; set; }
+
+        public DbSet<AirQualityCompositeIndexMonthlySrcLiveRecord> AirQualityCompositeIndexMonthlySrcLiveRecords { get; set; }
+
+        public DbSet<AirQualityCompositeIndexMonthlySrcStdRecord> AirQualityCompositeIndexMonthlySrcStdRecords { get; set; }
+
+        public DbSet<AirQualityCompositeIndexMonthlyPubLiveRecord> AirQualityCompositeIndexMonthlyPubLiveRecords { get; set; }
+
+        public DbSet<AirQualityCompositeIndexMonthlyPubStdRecord> AirQualityCompositeIndexMonthlyPubStdRecords { get; set; }
+
+        public DbSet<AirQualityCompositeIndexMonthlyAppLiveRecord> AirQualityCompositeIndexMonthlyAppLiveRecords { get; set; }
+
+        public DbSet<AirQualityCompositeIndexMonthlyAppStdRecord> AirQualityCompositeIndexMonthlyAppStdRecords { get; set; }
+
+        public DbSet<AirQualityCompositeIndexQuarterlySrcLiveRecord> AirQualityCompositeIndexQuarterlySrcLiveRecords { get; set; }
+
+        public DbSet<AirQualityCompositeIndexQuarterlySrcStdRecord> AirQualityCompositeIndexQuarterlySrcStdRecords { get; set; }
+
+        public DbSet<AirQualityCompositeIndexQuarterlyPubLiveRecord> AirQualityCompositeIndexQuarterlyPubLiveRecords { get; set; }
+
+        public DbSet<AirQualityCompositeIndexQuarterlyPubStdRecord> AirQualityCompositeIndexQuarterlyPubStdRecords { get; set; }
+
+        public DbSet<AirQualityCompositeIndexQuarterlyAppLiveRecord> AirQualityCompositeIndexQuarterlyAppLiveRecords { get; set; }
+
+        public DbSet<AirQualityCompositeIndexQuarterlyAppStdRecord> AirQualityCompositeIndexQuarterlyAppStdRecords { get; set; }
+
+        public DbSet<AirQualityCompositeIndexYearlySrcLiveRecord> AirQualityCompositeIndexYearlySrcLiveRecords { get; set; }
+
+        public DbSet<AirQualityCompositeIndexYearlySrcStdRecord> AirQualityCompositeIndexYearlySrcStdRecords { get; set; }
+
+        public DbSet<AirQualityCompositeIndexYearlyPubLiveRecord> AirQualityCompositeIndexYearlyPubLiveRecords { get; set; }
+
+        public DbSet<AirQualityCompositeIndexYearlyPubStdRecord> AirQualityCompositeIndexYearlyPubStdRecords { get; set; }
+
+        public DbSet<AirQualityCompositeIndexYearlyAppLiveRecord> AirQualityCompositeIndexYearlyAppLiveRecords { get; set; }
+
+        public DbSet<AirQualityCompositeIndexYearlyAppStdRecord> AirQualityCompositeIndexYearlyAppStdRecords { get; set; }
+
+
         public AQFWSDbContext(DbContextOptions<AQFWSDbContext> options)
             : base(options)
         {
@@ -41,7 +109,7 @@ namespace AQFWS.EntityFrameworkCore
             builder.Entity<AppUser>(b =>
             {
                 b.ToTable(AbpIdentityDbProperties.DbTablePrefix + "Users"); //Sharing the same table "AbpUsers" with the IdentityUser
-                
+
                 b.ConfigureByConvention();
                 b.ConfigureAbpUser();
 

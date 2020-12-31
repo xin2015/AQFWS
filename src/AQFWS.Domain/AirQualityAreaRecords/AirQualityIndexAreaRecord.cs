@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace AQFWS.AirQualityAreaRecords
 {
-    public class AirQualityIndexAreaRecord : AirQualityIndexRecord
+    public class AirQualityIndexAreaRecord : AirQualityIndexRecord, IArea
     {
-        public virtual AreaType AreaType { get; set; }
+        public virtual AreaType Type { get; set; }
 
         protected AirQualityIndexAreaRecord()
         {

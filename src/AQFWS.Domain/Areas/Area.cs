@@ -7,7 +7,7 @@ using Volo.Abp.Domain.Entities.Auditing;
 
 namespace AQFWS.Areas
 {
-    public class Area : AuditedAggregateRoot<Guid>
+    public class Area : AuditedAggregateRoot<Guid>, IArea
     {
         public Guid ParentId { get; set; }
         public string Code { get; set; }

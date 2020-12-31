@@ -8,6 +8,7 @@ using Volo.Abp.Users.EntityFrameworkCore;
 using AQFWS.Areas;
 using AQFWS.Stations;
 using AQFWS.AirQualityRecords;
+using AQFWS.AirQualityAreaRecords;
 
 namespace AQFWS.EntityFrameworkCore
 {
@@ -92,6 +93,66 @@ namespace AQFWS.EntityFrameworkCore
         public DbSet<AirQualityCompositeIndexYearlyAppLiveRecord> AirQualityCompositeIndexYearlyAppLiveRecords { get; set; }
 
         public DbSet<AirQualityCompositeIndexYearlyAppStdRecord> AirQualityCompositeIndexYearlyAppStdRecords { get; set; }
+
+        public DbSet<AirQualityIndexHourlySrcLiveAreaRecord> AirQualityIndexHourlySrcLiveAreaRecords { get; set; }
+
+        public DbSet<AirQualityIndexHourlySrcStdAreaRecord> AirQualityIndexHourlySrcStdAreaRecords { get; set; }
+
+        public DbSet<AirQualityIndexHourlyPubLiveAreaRecord> AirQualityIndexHourlyPubLiveAreaRecords { get; set; }
+
+        public DbSet<AirQualityIndexHourlyPubStdAreaRecord> AirQualityIndexHourlyPubStdAreaRecords { get; set; }
+
+        public DbSet<AirQualityIndexHourlyAppLiveAreaRecord> AirQualityIndexHourlyAppLiveAreaRecords { get; set; }
+
+        public DbSet<AirQualityIndexHourlyAppStdAreaRecord> AirQualityIndexHourlyAppStdAreaRecords { get; set; }
+
+        public DbSet<AirQualityIndexDailySrcLiveAreaRecord> AirQualityIndexDailySrcLiveAreaRecords { get; set; }
+
+        public DbSet<AirQualityIndexDailySrcStdAreaRecord> AirQualityIndexDailySrcStdAreaRecords { get; set; }
+
+        public DbSet<AirQualityIndexDailyPubLiveAreaRecord> AirQualityIndexDailyPubLiveAreaRecords { get; set; }
+
+        public DbSet<AirQualityIndexDailyPubStdAreaRecord> AirQualityIndexDailyPubStdAreaRecords { get; set; }
+
+        public DbSet<AirQualityIndexDailyAppLiveAreaRecord> AirQualityIndexDailyAppLiveAreaRecords { get; set; }
+
+        public DbSet<AirQualityIndexDailyAppStdAreaRecord> AirQualityIndexDailyAppStdAreaRecords { get; set; }
+
+        public DbSet<AirQualityCompositeIndexMonthlySrcLiveAreaRecord> AirQualityCompositeIndexMonthlySrcLiveAreaRecords { get; set; }
+
+        public DbSet<AirQualityCompositeIndexMonthlySrcStdAreaRecord> AirQualityCompositeIndexMonthlySrcStdAreaRecords { get; set; }
+
+        public DbSet<AirQualityCompositeIndexMonthlyPubLiveAreaRecord> AirQualityCompositeIndexMonthlyPubLiveAreaRecords { get; set; }
+
+        public DbSet<AirQualityCompositeIndexMonthlyPubStdAreaRecord> AirQualityCompositeIndexMonthlyPubStdAreaRecords { get; set; }
+
+        public DbSet<AirQualityCompositeIndexMonthlyAppLiveAreaRecord> AirQualityCompositeIndexMonthlyAppLiveAreaRecords { get; set; }
+
+        public DbSet<AirQualityCompositeIndexMonthlyAppStdAreaRecord> AirQualityCompositeIndexMonthlyAppStdAreaRecords { get; set; }
+
+        public DbSet<AirQualityCompositeIndexQuarterlySrcLiveAreaRecord> AirQualityCompositeIndexQuarterlySrcLiveAreaRecords { get; set; }
+
+        public DbSet<AirQualityCompositeIndexQuarterlySrcStdAreaRecord> AirQualityCompositeIndexQuarterlySrcStdAreaRecords { get; set; }
+
+        public DbSet<AirQualityCompositeIndexQuarterlyPubLiveAreaRecord> AirQualityCompositeIndexQuarterlyPubLiveAreaRecords { get; set; }
+
+        public DbSet<AirQualityCompositeIndexQuarterlyPubStdAreaRecord> AirQualityCompositeIndexQuarterlyPubStdAreaRecords { get; set; }
+
+        public DbSet<AirQualityCompositeIndexQuarterlyAppLiveAreaRecord> AirQualityCompositeIndexQuarterlyAppLiveAreaRecords { get; set; }
+
+        public DbSet<AirQualityCompositeIndexQuarterlyAppStdAreaRecord> AirQualityCompositeIndexQuarterlyAppStdAreaRecords { get; set; }
+
+        public DbSet<AirQualityCompositeIndexYearlySrcLiveAreaRecord> AirQualityCompositeIndexYearlySrcLiveAreaRecords { get; set; }
+
+        public DbSet<AirQualityCompositeIndexYearlySrcStdAreaRecord> AirQualityCompositeIndexYearlySrcStdAreaRecords { get; set; }
+
+        public DbSet<AirQualityCompositeIndexYearlyPubLiveAreaRecord> AirQualityCompositeIndexYearlyPubLiveAreaRecords { get; set; }
+
+        public DbSet<AirQualityCompositeIndexYearlyPubStdAreaRecord> AirQualityCompositeIndexYearlyPubStdAreaRecords { get; set; }
+
+        public DbSet<AirQualityCompositeIndexYearlyAppLiveAreaRecord> AirQualityCompositeIndexYearlyAppLiveAreaRecords { get; set; }
+
+        public DbSet<AirQualityCompositeIndexYearlyAppStdAreaRecord> AirQualityCompositeIndexYearlyAppStdAreaRecords { get; set; }
 
 
         public AQFWSDbContext(DbContextOptions<AQFWSDbContext> options)

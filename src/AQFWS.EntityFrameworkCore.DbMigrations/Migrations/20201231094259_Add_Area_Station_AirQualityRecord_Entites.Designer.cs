@@ -4,15 +4,17 @@ using AQFWS.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Volo.Abp.EntityFrameworkCore;
 
 namespace AQFWS.Migrations
 {
     [DbContext(typeof(AQFWSMigrationsDbContext))]
-    partial class AQFWSMigrationsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201231094259_Add_Area_Station_AirQualityRecord_Entites")]
+    partial class Add_Area_Station_AirQualityRecord_Entites
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
